@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 const ReviewShow = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://safe-mesa-29013.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReviews(data.slice(0, 6)))
     }, [])

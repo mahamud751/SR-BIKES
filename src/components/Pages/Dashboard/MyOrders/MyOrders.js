@@ -13,7 +13,7 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        const url = `http://localhost:5000/booking?email=${user.email}`
+        const url = `https://safe-mesa-29013.herokuapp.com/booking?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setBooking(data))
@@ -22,7 +22,7 @@ const MyOrders = () => {
         const confirmation = window.confirm('Are you Sure?')
         if (confirmation) {
             console.log('yes')
-            const url = `http://localhost:5000/booking/${id}`
+            const url = `https://safe-mesa-29013.herokuapp.com/booking/${id}`
             console.log(url)
             fetch(url, {
                 method: 'DELETE'

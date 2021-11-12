@@ -1,5 +1,5 @@
 import initializeFirebase from "../components/Pages/Login/Firebase/Firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, updateProfile, getIdToken, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 initializeFirebase()
@@ -8,7 +8,7 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [authError, setAuthError] = useState('')
     const [admin, setAdmin] = useState(false)
-    const [token, setToken] = useState('')
+
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider()
@@ -35,30 +35,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
-    // const registerUser = (email, password, name, history) => {
-    //     setIsLoading(true)
-    //     createUserWithEmailAndPassword(auth, email, password)
-    //         .then((userCredential) => {
-    //             const newUser = { email, displayName: name }
-    //             setUser(newUser)
-    //             saveUser(email, name, 'POST')
 
-    //             history.replace('/')
-
-    //             updateProfile(auth.currentUser, {
-    //                 displayName: name
-    //             }).then(() => {
-
-    //             }).catch((error) => {
-
-    //             });
-    //             setAuthError('')
-    //         })
-    //         .catch((error) => {
-    //             setAuthError(error.message)
-    //         })
-    //         .finally(setIsLoading(false));
-    // }
     const loginUser = (email, password, location, history) => {
         setIsLoading(true)
         const auth = getAuth();
@@ -74,19 +51,7 @@ const useFirebase = () => {
             })
             .finally(setIsLoading(false));;
     }
-    // const signWithGoogle = (location, history) => {
-    //     setIsLoading(true);
-    //     signInWithPopup(auth, googleProvider)
-    //         .then((result) => {
-    //             const user = result.user;
-    //             saveUser(user.email, user.displayName, 'PUT');
-    //             setAuthError('');
-    //             const destination = location?.state?.from || '/';
-    //             history.replace(destination);
-    //         }).catch((error) => {
-    //             setAuthError(error.message);
-    //         }).finally(() => setIsLoading(false));
-    // }
+
     const signWithGoogle = (location, history) => {
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
@@ -106,10 +71,7 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                getIdToken(user)
-                    .then(idToken => {
-                        setToken(idToken);
-                    })
+
             } else {
                 setUser({})
             }
@@ -117,25 +79,10 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [auth])
-    // useEffect(() => {
-    //     onAuthStateChanged(auth, (user) => {
-    //         if (user) {
-    //             setUser(user)
-    //             // getIdToken(user)
-    //             //     .then(idToken => {
-    //             //         setToken(idToken)
-    //             //     })
 
-
-    //         } else {
-    //             setUser({})
-    //         }
-    //         setIsLoading(false)
-    //     });
-    // }, [auth])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://safe-mesa-29013.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -151,7 +98,7 @@ const useFirebase = () => {
     }
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://safe-mesa-29013.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -166,7 +113,6 @@ const useFirebase = () => {
         authError,
         logOut,
         admin,
-        token,
         isLoading,
         registerUser,
         signWithGoogle,
