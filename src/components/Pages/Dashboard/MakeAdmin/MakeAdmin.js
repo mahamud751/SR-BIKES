@@ -44,7 +44,7 @@ const MakeAdmin = () => {
                     variant="standard" />
                 <Button type="submit" variant="contained">Make Admin</Button>
             </form>
-            <img src="https://i.ibb.co/7kn8fZ0/png-transparent-car-softail-harley-davidson-sportster-motorcycle-red-motorcycle-exhaust-system-car-m.png" style={{ width: "300px" }} alt="" />
+            <img className="img-fluid" src="https://i.ibb.co/16Cj7qP/81lk3mc3y-EL-removebg-preview.png" alt="" />
             {success && <Alert severity="success">Made Admin successfully!</Alert>}
         </div>
     );

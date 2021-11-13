@@ -12,7 +12,7 @@ const Products = () => {
     }, [])
     return (
         <Container>
-            <h1 className="m-3">Upcoming Events</h1>
+            <h1 className="m-5">SR BIKES COLLECTION</h1>
 
             <Grid container spacing={2}>
                 {

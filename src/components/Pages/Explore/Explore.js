@@ -15,7 +15,7 @@ const Explore = () => {
         <>
             <Navigation></Navigation>
             <Container>
-                <h1 className="m-5">Explore Bikes</h1>
+                <h1 className="m-5">EXPLORE SR BIKES</h1>
                 <Grid container spacing={2}>
                     {
                         products.map(product => <ProductDisplay

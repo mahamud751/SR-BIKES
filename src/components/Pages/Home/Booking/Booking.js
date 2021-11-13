@@ -66,13 +66,13 @@ const Booking = () => {
                             label="Name"
                             size="small"
                         />
-                        {/* <TextField
+                        <TextField
                             id="outlined-size-small"
                             sx={{ width: "90%", m: 1 }}
-                            {...register("productName")}
-                            defaultValue={product.name}
+                            {...register("status")}
+                            defaultValue={"Pending"}
                             size="small"
-                        /> */}
+                        />
 
                         <TextField
                             id="outlined-size-small"

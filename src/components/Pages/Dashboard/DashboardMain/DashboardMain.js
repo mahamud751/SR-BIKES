@@ -5,16 +5,9 @@ import React from 'react';
 
 const DashboardMain = () => {
     return (
-        <div>
-            <h2>Welcome</h2>
-            <img src="https://i.ibb.co/RNrnjvN/screen-6.jpg" alt="" style={{ width: "400px" }} />
-            <Grid container spacing={2}>
-
-                <Grid item xs={12} md={12} >
-
-                </Grid>
-            </Grid>
-        </div>
+        <>
+            <img src="https://images.unsplash.com/photo-1524591652733-73fa1ae7b5ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" alt="" />
+        </ >
     );
 };
 

@@ -14,34 +14,31 @@ const Banner = () => {
 
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h6>SR BIKE SHOP THE MOST LARGEST BIKE STORE IN THE WOLD CAN SERVE YOU LATEST QUALITY OF MOTORCYCLE ALSO YOU CAN SELL HERE YOUR MOTORCYCLE</h6>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="img-fluid"
-                        src="https://i.ibb.co/S66RYxF/photo-1562424292-1fa536217c58.png"
+                        src="https://i.ibb.co/16Cj7qP/81lk3mc3y-EL-removebg-preview.png"
                         alt="Second slide"
                     // style={{ width: '300px' }}
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h6>BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="img-fluid"
-                        src="https://i.ibb.co/RjwDbgB/13743305-173104863110712-1899820740-n.png"
+                        src="https://i.ibb.co/z41f2kq/photo-1622185135505-2d795003994a-1.png"
                         alt="Third slide"
 
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h6>ENJOY DISCOUNT 50%</h6>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

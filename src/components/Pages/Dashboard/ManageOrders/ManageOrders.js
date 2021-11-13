@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const ManageOrders = () => {
@@ -61,7 +61,7 @@ const ManageOrders = () => {
                                 <TableCell align="right">{row.address}</TableCell>
                                 <TableCell align="right">{row.number}</TableCell>
                                 <TableCell align="right">{row.date}</TableCell>
-                                <TableCell align="right"> <p onClick={() => handleDlt(row._id)} style={{ cursor: "pointer" }}>Remove</p></TableCell>
+                                <TableCell align="right"> <p onClick={() => handleDlt(row._id)} style={{ cursor: "pointer" }}>{<DeleteIcon fontSize="large" />}</p></TableCell>
 
                             </TableRow>
                         ))}
