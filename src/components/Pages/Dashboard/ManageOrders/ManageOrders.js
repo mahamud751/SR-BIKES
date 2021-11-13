@@ -46,6 +46,7 @@ const ManageOrders = () => {
                             <TableCell align="right">Address</TableCell>
                             <TableCell align="right">Phone</TableCell>
                             <TableCell align="right">Date</TableCell>
+                            <TableCell align="right">Status</TableCell>
                             <TableCell align="right">Action</TableCell>
 
                         </TableRow>
@@ -61,6 +62,7 @@ const ManageOrders = () => {
                                 <TableCell align="right">{row.address}</TableCell>
                                 <TableCell align="right">{row.number}</TableCell>
                                 <TableCell align="right">{row.date}</TableCell>
+                                <TableCell align="right">{row.status}</TableCell>
                                 <TableCell align="right"> <p onClick={() => handleDlt(row._id)} style={{ cursor: "pointer" }}>{<DeleteIcon fontSize="large" />}</p></TableCell>
 
                             </TableRow>

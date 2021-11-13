@@ -1,12 +1,14 @@
-import { Grid } from '@mui/material';
 import React from 'react';
+import video from '../../../../Motorcycle Cinematic Video.mp4'
 
 
 
 const DashboardMain = () => {
     return (
         <>
-            <img src="https://images.unsplash.com/photo-1524591652733-73fa1ae7b5ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" alt="" />
+            <h2 sx={{ m: 5 }}>Welcome to our Shop</h2>
+            <video src={video} playsinliner="playsinliner" autoplay="autoplay" loop="loop"></video>
+
         </ >
     );
 };
