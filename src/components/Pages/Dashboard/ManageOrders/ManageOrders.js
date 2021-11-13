@@ -12,7 +12,7 @@ import Paper from '@mui/material/Paper';
 const ManageOrders = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://safe-mesa-29013.herokuapp.com/booking')
+        fetch('https://quiet-springs-52854.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -20,7 +20,7 @@ const ManageOrders = () => {
         const confirmation = window.confirm('Are you Sure?')
         if (confirmation) {
             console.log('yes')
-            const url = `https://safe-mesa-29013.herokuapp.com/booking/${id}`
+            const url = `https://quiet-springs-52854.herokuapp.com/booking/${id}`
             console.log(url)
             fetch(url, {
                 method: 'DELETE'

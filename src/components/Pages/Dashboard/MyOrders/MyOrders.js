@@ -13,7 +13,7 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        const url = `https://safe-mesa-29013.herokuapp.com/booking?email=${user.email}`
+        const url = `https://quiet-springs-52854.herokuapp.com/myBooking?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setBooking(data))
@@ -22,7 +22,7 @@ const MyOrders = () => {
         const confirmation = window.confirm('Are you Sure?')
         if (confirmation) {
             console.log('yes')
-            const url = `https://safe-mesa-29013.herokuapp.com/booking/${id}`
+            const url = `https://quiet-springs-52854.herokuapp.com/myBooking/booking/${id}`
             console.log(url)
             fetch(url, {
                 method: 'DELETE'

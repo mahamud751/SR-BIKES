@@ -6,7 +6,7 @@ import Rating from 'react-rating';
 const ReviewShow = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://safe-mesa-29013.herokuapp.com/review')
+        fetch('https://quiet-springs-52854.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReviews(data.slice(0, 6)))
     }, [])

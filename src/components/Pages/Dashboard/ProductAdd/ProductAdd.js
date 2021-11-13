@@ -20,7 +20,7 @@ const ProductAdd = () => {
     const { register, handleSubmit, reset } = useForm();
     const [success, setSuccess] = useState(false);
     const onSubmit = data => {
-        axios.post('https://safe-mesa-29013.herokuapp.com/products', data)
+        axios.post('https://quiet-springs-52854.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     setSuccess(true);
