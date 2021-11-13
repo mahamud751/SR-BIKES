@@ -12,7 +12,6 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import HomeIcon from '@mui/icons-material/Home';
@@ -56,31 +55,6 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <Link to="/home">
-                <Button color="inherit">Home</Button>
-            </Link>
-            <br />
-            <Link to={`${url}`}>
-                <Button color="inherit">Dashboard</Button>
-            </Link>
-            <br />
-            <Link to={`${url}/myOrders`}>
-                <Button color="inherit">My Orders</Button>
-            </Link>
-            <br />
-            <Link to={`${url}/review`}>
-                <Button color="inherit">Review</Button>
-            </Link>
-            <br />
-            <Link to={`${url}/payment`} sx={{ p: 1, textDecoration: "none" }}>
-                <Button color="inherit">Payment</Button>
-            </Link>
-            <br />
-            <Link onClick={logOut} to={`${url}`}>
-                <Button color="inherit">LogOut</Button>
-            </Link>
-            {/* <Button style={{ textDecoration: "none", color: 'white' }} onClick={logOut} color="inherit">Logout</Button> */}
-
             <List>
                 <Link to="/home">
                     {['Home'].map((text, index) => (
@@ -147,6 +121,14 @@ function Dashboard(props) {
                             </ListItem>
                         ))}
                     </Link>
+                    <Link onClick={logOut} to={`${url}/logOut`}>
+                        {['Log Out'].map((text, index) => (
+                            <ListItem button key={text}>
+                                {<AdminPanelSettingsIcon fontSize="large" />}
+                                <ListItemText primary={text} sx={{ p: 1 }} />
+                            </ListItem>
+                        ))}
+                    </Link>
 
                 </Box>}
 
@@ -161,6 +143,7 @@ function Dashboard(props) {
     return (
 
         <Box sx={{ display: 'flex' }}>
+
             <CssBaseline />
             <AppBar
                 position="fixed"

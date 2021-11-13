@@ -34,43 +34,51 @@ const Review = () => {
             })
     };
     return (
+        <>
+            <Box sx={style} className="bookingOrder">
+                <Typography id="transition-modal-title" variant="h6" component="h2">
 
-        <Box sx={style} className="bookingOrder">
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <TextField
+                            id="outlined-size-small"
+                            sx={{ width: "90%", m: 1 }}
+                            {...register("name", { required: true, maxLength: 20 })}
+                            defaultValue={user.displayName}
+                            size="small"
+                        />
+                        <TextField
+                            id="outlined-size-small"
+                            sx={{ width: "90%", m: 1 }}
+                            {...register("email")}
+                            defaultValue={user.email}
+                            size="small"
+                        />
+                        <TextField
+                            id="outlined-textarea"
+                            sx={{ width: "90%", m: 1 }}
+                            {...register("review")}
+                            label="Review"
+                            placeholder="Say Something"
+                            multiline
+                        />
+                        <TextField
+                            id="outlined-textarea"
+                            sx={{ width: "90%", m: 1 }}
+                            {...register("rating")}
+                            label="Rating"
+                            placeholder="Rating"
+                            multiline
+                        />
 
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <TextField
-                        id="outlined-size-small"
-                        sx={{ width: "90%", m: 1 }}
-                        {...register("name", { required: true, maxLength: 20 })}
-                        defaultValue={user.displayName}
-                        size="small"
-                    />
-                    <TextField
-                        id="outlined-size-small"
-                        sx={{ width: "90%", m: 1 }}
-                        {...register("email")}
-                        defaultValue={user.email}
-                        size="small"
-                    />
-                    <TextField
-                        id="outlined-textarea"
-                        sx={{ width: "90%", m: 1 }}
-                        {...register("review")}
-                        label="Review"
-                        placeholder="Say Something"
-                        multiline
-                    />
+                        <Button type="submit" variant="contained">Comment</Button>
+                    </form>
 
-                    <Button type="submit" variant="contained">Comment</Button>
-                </form>
+                </Typography>
+            </Box>
 
-            </Typography>
-        </Box>
-
-
+        </>
     );
 };
 

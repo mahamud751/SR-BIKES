@@ -1,9 +1,8 @@
-import { Card, CardActions, Button, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, Button, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+
 
 
 
@@ -34,6 +33,7 @@ const ProductDisplay = ({ product, setBookingSuccess }) => {
                         <Typography variant="body2">
                             {description.slice(0, 120)}
                         </Typography>
+
                     </CardContent>
 
                     <div style={{

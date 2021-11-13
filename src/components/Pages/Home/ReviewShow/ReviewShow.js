@@ -1,6 +1,7 @@
 import { Card, CardContent, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import Rating from 'react-rating';
 
 const ReviewShow = () => {
     const [reviews, setReviews] = useState([])
@@ -33,6 +34,12 @@ const ReviewShow = () => {
                                         <Typography sx={{ fontSize: 24, m: 3 }} color="text.secondary" gutterBottom>
                                             {product.name}
                                         </Typography>
+                                        <Rating
+                                            initialRating={product.rating}
+                                            emptySymbol="far fa-star"
+                                            fullSymbol="fas fa-star icon"
+                                            readonly
+                                        ></Rating>
                                     </CardContent>
 
                                 </Card>

@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Avatar, CardMedia, Grid } from '@mui/material';
 
 
 
@@ -37,37 +39,42 @@ const ManageProducts = () => {
     }
     return (
         <div>
-            <TableContainer component={Paper}>
-                <Table sx={{}} aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell align="right">Name</TableCell>
-                            <TableCell align="right">Email</TableCell>
-                            <TableCell align="right">Address</TableCell>
-                            <TableCell align="right">Phone</TableCell>
-                            <TableCell align="right">Date</TableCell>
-                            <TableCell align="right">Action</TableCell>
+            <Grid container spacing={2}>
+                <Grid item xs={12} md={5}>
+                    <img className="img-fluid mt-5" src="https://i.ibb.co/16Cj7qP/81lk3mc3y-EL-removebg-preview.png" alt="" />
+                </Grid>
+                <Grid item xs={12} md={7}>
+                    <TableContainer component={Paper}>
+                        <Table sx={{}} aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>Bikes</TableCell>
+                                    <TableCell align="right">Name</TableCell>
+                                    <TableCell align="right">Price</TableCell>
+                                    <TableCell align="right">Action</TableCell>
 
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {products.map((row) => (
-                            <TableRow
-                                key={row._id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell align="right">{row.name}</TableCell>
-                                <TableCell align="right">{row.email}</TableCell>
-                                <TableCell align="right">{row.address}</TableCell>
-                                <TableCell align="right">{row.number}</TableCell>
-                                <TableCell align="right">{row.date}</TableCell>
-                                <TableCell align="right"> <p onClick={() => handleDlt(row._id)} style={{ cursor: "pointer" }}>Remove</p></TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {products.map((row) => (
+                                    <TableRow
+                                        key={row._id}
+                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                    > <TableCell component="th" scope="row">
+                                            <Avatar sx={{ width: 80, height: 80 }} alt="Remy Sharp" src={row.img} />
+                                        </TableCell>
+                                        <TableCell align="right">{row.name}</TableCell>
+                                        <TableCell align="right">{row.price}</TableCell>
+                                        <TableCell align="right"> <p onClick={() => handleDlt(row._id)} style={{ cursor: "pointer" }}>{<DeleteIcon fontSize="large" />}</p></TableCell>
 
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Grid>
+
+            </Grid>
 
         </div>
 
