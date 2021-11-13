@@ -38,7 +38,7 @@ const ProductAdd = () => {
                     <TextField
                         id="outlined-size-small"
                         sx={{ width: "90%", m: 1 }}
-                        {...register("name", { required: true, maxLength: 20 })}
+                        {...register("name")}
                         label="Name"
                         size="small"
                     />
