@@ -121,16 +121,17 @@ function Dashboard(props) {
                             </ListItem>
                         ))}
                     </Link>
-                    <Link onClick={logOut} to={`${url}/logOut`}>
-                        {['Log Out'].map((text, index) => (
-                            <ListItem button key={text}>
-                                {<AdminPanelSettingsIcon fontSize="large" />}
-                                <ListItemText primary={text} sx={{ p: 1 }} />
-                            </ListItem>
-                        ))}
-                    </Link>
+
 
                 </Box>}
+                <Link onClick={logOut} to="/home">
+                    {['Log Out'].map((text, index) => (
+                        <ListItem button key={text}>
+                            {<AdminPanelSettingsIcon fontSize="large" />}
+                            <ListItemText primary={text} sx={{ p: 1 }} />
+                        </ListItem>
+                    ))}
+                </Link>
 
 
             </List>
