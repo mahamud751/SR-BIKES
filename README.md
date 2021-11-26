@@ -7,11 +7,11 @@ This project was bootstrapped with(https://github.com/programming-hero-web-cours
  
 
 ## Our Target---
-* Quality bikes at several price points.
+* Quality bikes at several price point.
 
 * Your market research might indicate that there is a gap in the market that your shop can fill.
 
-* You'll want to make sure that plenty of customers will choose your shop rather than one of your competitors.
+* You will want to make sure that plenty of customers will choose your shop rather than one of your competitors.
 
 * Are easily reached with advertising, such as outdoor displays on main street next to campus.
 
