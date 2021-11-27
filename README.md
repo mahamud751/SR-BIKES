@@ -7,11 +7,12 @@ This project was bootstrapped with(https://github.com/programming-hero-web-cours
  
 
 ## Our Target---
-* Quality bikes at several price point.
+* A full-stack e-commerce web app. 
 
-* Your market research might indicate that there is a gap in the market that your shop can fill.
+* The user can book products, give them a review, and can see booking status.
 
-* You will want to make sure that plenty of customers will choose your shop rather than one of your competitors.
+* Admin can change the order status, add service, delete service, edit service, and can make 
+someone an admin etc.
 
 * Are easily reached with advertising, such as outdoor displays on main street next to campus.
 
